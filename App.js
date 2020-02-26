@@ -4,9 +4,12 @@ import HomeScreen from "./src/screens/HomeScreen";
 import ListScreen from './src/screens/ListScreen';
 import ComponentsScreen from './src/screens/ComponentsScreen';
 import ImageScreen from './src/screens/ImageScreen';
-import CounterScreen from './src/screens/CounterScreen';
+import CounterScreen from './src/screens/CounterScreen_withUseReducer';
+// import CounterScreen from './src/screens/CounterScreen_withUseState';
 import ColorScreen from './src/screens/ColorScreen';
-import SquareColorScreen from './src/screens/SquareColorScreen';
+import SquareColorScreen from './src/screens/SquareColorScreen_withUseReducer';
+import TextScreen from './src/screens/TextScreen';
+import BoxLayoutScreen from './src/screens/BoxLayoutScreen';
 
 // Stack Navigator = objeto que decide qué debe renderizar en cualquier momento (Home, List, ...).
 // Cuando SN renderiza un componente, le pasa como props una serie de configuration options.
@@ -23,7 +26,9 @@ const navigator = createStackNavigator(
     Images: ImageScreen,
     Counter: CounterScreen,
     Color: ColorScreen,
-    SquareColor: SquareColorScreen
+    SquareColor: SquareColorScreen,
+    Text: TextScreen,
+    BoxLayout: BoxLayoutScreen
   },
   {
     initialRouteName: "Home", // el primer componente que se debe mostrar; puede ser cualquiera de los componentes creados (Home, Components: que sea exactamente el mismo nombre!!!)

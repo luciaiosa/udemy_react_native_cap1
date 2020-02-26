@@ -34,7 +34,15 @@ const HomeScreen = ({ navigation }) => {
         title="Go to square color page"
         onPress={() => navigation.navigate('SquareColor')}
       />
-      {/* Button NO es un elemento selfclosed. Dentro de el se colocan elementos que, al pulsarlos, TouchableOpacity detecta que han sido pulsados, y devuelve un onPress event
+      <Button 
+        title="Go to text page"
+        onPress={() => navigation.navigate('Text')}
+      />
+      <Button 
+        title="Go to box layout page"
+        onPress={() => navigation.navigate('BoxLayout')}
+      />
+      {/* TouchableOpacity NO es un elemento selfclosed. Dentro de el se colocan elementos que, al pulsarlos, TouchableOpacity detecta que han sido pulsados, y devuelve un onPress event
       No tiene estilo, como Button. Si tenemos varios elementos dentro de el, si pulso en uno, se pulsa en todos.
       Es muy util en caso de que queramos tener una imagen, y un texto dentro de el, y al pulsar en cualquiera, haga una cosa. */}
       <TouchableOpacity onPress={() => navigation.navigate('List')}>

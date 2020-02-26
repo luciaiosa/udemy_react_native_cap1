@@ -5,6 +5,7 @@ import ColorCounter from '../components/ColorCounter';
 const COLOR_INCREMENT = 30;
 
 const SquareColorScreen = () => {
+
     const [red, setRed] = useState(0);
     const [blue, setBlue] = useState(0);
     const [green, setGreen] = useState(0);
@@ -21,6 +22,8 @@ const SquareColorScreen = () => {
                 return;
             case 'green':
                 green + change > 255 || green + change < 0 ? null : setGreen(green + change);
+                return;
+            default:
                 return;
         }
 
